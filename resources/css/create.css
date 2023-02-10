@@ -1,5 +1,5 @@
-.bg-image-vertical {
-    background-color: var(--main-blue);
+.my-bg-image-vertical {
+    background-color: white;
     position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -11,4 +11,9 @@
     .h-custom-2 {
     height: 100%;
     }
+    }
+
+    .my-form{
+        background-color: var(--main-blue);
+
     }
