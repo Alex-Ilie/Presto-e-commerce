@@ -1,0 +1,31 @@
+:root{
+    --main-blue: #003049; 
+    --main-red: #D62828;
+    --orange: #F77F00;
+    --yellow: #FCBF49;
+    --beige: #EAE2B7;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar{
+    background-color: var(--main-blue);
+    height: 50px;
+}
+
+.nav2{
+    background-color: white;
+    border-bottom: 1px solid black;
+    height: 40px;
+}
+
+.footer{
+    background-color: var(--main-blue);
+}
+
+
+
+
+
