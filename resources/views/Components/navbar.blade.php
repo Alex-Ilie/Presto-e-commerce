@@ -7,7 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
             @auth
-
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('products.create') }}">Inserisci prodotto</a>
+            </li>
             <li>
                 <p>Bentornat*, {{ Auth::user()->name }}</p>
                 </li>
@@ -29,10 +31,7 @@
             </li>
             @endguest
           </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Cerca</button>
-      </form>
+      
     </div>
   </div>
 </nav>

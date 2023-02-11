@@ -56,7 +56,7 @@ class ProductCreate extends Component
             'img' => $img,
             ]);
         $this->reset();
-        return redirect()->route('home')->with('message', "Prodotto caricato!");
+        return redirect()->route('products.index')->with('message', "Prodotto caricato!");
 
 
 
