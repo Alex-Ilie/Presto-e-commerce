@@ -3,7 +3,7 @@
     <div class="row h-100 align-items-center justify-content-right">
       <div class="col-12 col-md-6">
       </div>
-      <div class="col-12 col-md-6 text-center">
+      <div class="col-12 col-md-6 text-center masthead-text">
         <h1 class="my-text display-2 fw-bold">Presto.it</h1>
         <p class="my-text2 fs-2 fw-bold">I migliori prodotti a portata di click</p>
         <div class="">
@@ -17,11 +17,8 @@
           <a href="{{route('products.index')}}" class="text-decoration-none">
             <button class="button-34">Compra</button>
           </a>
-            
-    </div>
+        </div>
       </div>
     </div>
   </div>
-  
-  
 </header>

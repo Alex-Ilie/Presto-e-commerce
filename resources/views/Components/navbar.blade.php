@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav mx-auto my-search">
         <form class="justify-content-evenly my-search-form d-flex">
           <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
           <button class="my-button btn" type="submit">Cerca</button>

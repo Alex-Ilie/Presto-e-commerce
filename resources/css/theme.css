@@ -14,18 +14,19 @@ body{
     background-color: var(--main-blue);
     height: 50px;
     padding: 30px;
+    position: relative;
 }
 
 .nav2{
     background-color: white;
     border-bottom: 1px solid black;
     height: 40px;
-
 }
 
 .myfooter{
     background-color: var(--main-blue);
 }
+
 .my-search-form {
     display: flex;
     justify-content: center;
@@ -47,11 +48,25 @@ body{
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
     font-size: 50px
-    
-    
 }
 
-
+@media (max-width: 1025px) {
+    .nav2 {
+        display: none;
+    }
+    .my-search {
+        display: none;
+    }
+    .navbar-nav {
+        background-color: var(--main-blue);
+        width: 150px;
+        position: absolute;
+        top: 60px;
+        right: 5px;
+        color: black;
+        padding-left: 10px;
+    }
+}
 
 
 

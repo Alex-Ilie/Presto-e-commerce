@@ -1,8 +1,8 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 <section class="vh-100 bg-image-vertical">
-<center>
-    <a href="{{ route('home') }}"><img src="./img/loghetto.png" class="loghetto" alt="logo2"></a>
-</center>
+  <center>
+      <a href="{{ route('home') }}"><img src="./img/loghetto.png" class="loghetto mt-5" alt="logo2"></a>
+  </center>
   <div class="container py-5 h-75">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">

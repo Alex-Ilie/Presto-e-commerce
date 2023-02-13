@@ -35,7 +35,6 @@
                 <p>Prezzo: € {{$product->price}}</p>
                 <p>Inserito da: {{$product->user->name}}</p>
                 <p>Inserito il: {{$product->created_at->format('d/m/Y')}}</p>
-
             </div>
         </div>
     </div>
