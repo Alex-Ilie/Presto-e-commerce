@@ -1,16 +1,15 @@
 <x-layout>
-<div class="container">
+<div class="container-fluid mycolor">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 d-flex flex-column align-items-center">
 
-        <a href="{{ route('home') }}"><img src="./img/loghetto.png" class="loghetto" alt="logo2"></a>
-        <h2>Inserisci prodotto</h2>
+        <a href="{{ route('home') }}"><img src="\img\loghetto.png" class="loghetto mt-5" alt="logo2"></a>
 
         </div>
     </div>
 </div>
 
-        <div class="row mt-3">
+        <div class="row">
 
                 <livewire:product-create/>
 

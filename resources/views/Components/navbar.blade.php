@@ -15,7 +15,7 @@
         <li class="nav-item dropdown">
         @auth
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Bentornat*, {{ Auth::user()->name }}
+          Benvenuto/a, {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>

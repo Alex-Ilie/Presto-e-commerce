@@ -43,4 +43,30 @@
   .button-33:hover {
     box-shadow: rgba(255, 255, 255, 0.35) 0 -25px 18px -14px inset,rgba(255, 255, 255, 0.35) 0 1px 2px,rgba(255, 255, 255, 0.35) 0 2px 4px,rgba(255, 255, 255, 0.35) 0 4px 8px,rgba(255, 255, 255, 0.35) 0 8px 16px,rgba(255, 255, 255, 0.35) 0 16px 32px;
     transform: scale(1.05) rotate(-1deg);
+    color: white;
+  }
+
+  .button-35 {
+    background-color: var(--main-red);
+    border-radius: 100px;
+    box-shadow: rgba(3, 7, 73, 0.2) 0 -25px 18px -14px inset,rgba(3, 7, 73, 0.2) 0 1px 2px,rgba(3, 7, 73, 0.2) 0 2px 4px,rgba(3, 7, 73, 0.2) 0 4px 8px,rgba(3, 7, 73, 0.2) 0 8px 16px,rgba(3, 7, 73, 0.2) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-35:hover {
+    box-shadow: rgba(255, 255, 255, 0.35) 0 -25px 18px -14px inset,rgba(255, 255, 255, 0.35) 0 1px 2px,rgba(255, 255, 255, 0.35) 0 2px 4px,rgba(255, 255, 255, 0.35) 0 4px 8px,rgba(255, 255, 255, 0.35) 0 8px 16px,rgba(255, 255, 255, 0.35) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+    color: white;
   }

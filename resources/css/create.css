@@ -1,5 +1,5 @@
 .my-bg-image-vertical {
-    background-color: white;
+    background-color: var(--main-blue);
     position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -14,6 +14,17 @@
     }
 
     .my-form{
-        background-color: var(--main-blue);
+        background-color: white;
+        color: rgb(0, 0, 0);
 
+    
     }
+
+    .mycolor{
+        background-color: var(--main-blue);
+    }
+
+    .h2color{
+        color: white;
+    }
+    

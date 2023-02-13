@@ -23,7 +23,7 @@ body{
 
 }
 
-.footer{
+.myfooter{
     background-color: var(--main-blue);
 }
 .my-search-form {
@@ -32,6 +32,26 @@ body{
     align-items: center;
     height: 50px;
 }
+
+.myalert{
+    width: 150px;
+    height: 50px;
+    border-color: rgb(214, 49, 49);
+    background-color: rgba(66, 147, 66, 0.611);
+    margin-top: 30px;
+    border: rgb(0, 0, 0) 1px solid;
+}
+
+.myh2{
+    color:  #000000;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px
+    
+    
+}
+
+
 
 
 

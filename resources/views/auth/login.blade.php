@@ -14,18 +14,17 @@
                 @csrf
 
             <div class="form-outline mb-4">
-              <input name="email" type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typeEmailX-2">Email</label>
+              <input name="email" type="email" id="typeEmailX-2" placeholder="Email" class="form-control form-control-lg" />
             </div>
 
             <div class="form-outline mb-4">
-              <input name="password" type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typePasswordX-2">Password</label>
+              <input name="password" type="password" id="typePasswordX-2" placeholder="Password" class="form-control form-control-lg" />
             </div>
 
             <button class="button-33" type="submit">Accedi</button>
 
             <hr class="my-4">
+            <a href="{{ route('home') }}" class="button-35" type="submit" >Torna alla Home</a>
             </form>
           </div>
         </div>

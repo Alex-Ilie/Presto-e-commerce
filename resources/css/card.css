@@ -1,0 +1,27 @@
+.mycard{
+    border: 1px solid #000000;
+    background-color: #EAE2B7;
+    box-shadow: rgba(3, 7, 73, 0.2) 0 -25px 18px -14px inset,rgba(3, 7, 73, 0.2) 0 1px 2px,rgba(3, 7, 73, 0.2) 0 2px 4px,rgba(3, 7, 73, 0.2) 0 4px 8px,rgba(3, 7, 73, 0.2) 0 8px 16px,rgba(3, 7, 73, 0.2) 0 16px 32px;
+}
+
+
+.myimg{
+    border-bottom: 1px solid black;
+}
+
+.card-title{
+    font-size: large;
+    text-align: center;
+    color: var(--main-blue);
+    font-weight: bold;
+}
+
+.textprova{
+    color: var(--main-red);
+}
+
+.textprova:hover{
+    color: var(--main-red);
+    border-bottom: 1px solid var(--main-red);
+    
+}

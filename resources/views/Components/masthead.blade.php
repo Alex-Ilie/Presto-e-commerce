@@ -8,14 +8,14 @@
         <p class="my-text2 fs-2 fw-bold">I migliori prodotti a portata di click</p>
         <div class="">
           @if (Auth::user() ==null )
-          <a href="{{route('login')}}"> <button class="button-33 me-5">Vendi</button></a>
+          <a href="{{route('login')}}"> <button class="button-34 me-5">Vendi</button></a>
           @else 
           <a href="{{route('products.create')}}" class="text-decoration-none">
-            <button class="button-33 me-5">Vendi</button>
+            <button class="button-34 me-5">Vendi</button>
           </a>
           @endif
           <a href="{{route('products.index')}}" class="text-decoration-none">
-            <button class="button-33">Compra</button>
+            <button class="button-34">Compra</button>
           </a>
             
     </div>

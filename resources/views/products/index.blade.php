@@ -1,13 +1,17 @@
 <x-layout>
     <center>
-        <div class="w-75">
+        <div classs="container p-5 mt-4">
             @if (session('message'))
-                    <div class="alert alert-success">
-                        {{ session('message') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                    </div>
-            @endif
-        </div>
+	        <div class="row no-gutters ">
+		     <div class="col-12">
+			        <div class="alert alert-success fade show" role="alert">
+			 	            <h4 class="alert-heading">{{ session('message') }}</h4>
+			  	            <p>This is an alert within a column. The column can be made any size at different viewpoints.</p>
+			        </div>
+		        </div>
+	        </div>
+        </div>       
+                @endif
     </center>
 <div class="container my-5">
         <div class="row">
