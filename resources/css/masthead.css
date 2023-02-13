@@ -5,4 +5,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  
+  }
+
+  .my-text{
+    color: #003049;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+
+  .my-text2{
+    color:  #0a567e;
   }
