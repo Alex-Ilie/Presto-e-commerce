@@ -13,7 +13,16 @@
 <body>
     <x-navbar />
     <x-navbar2 />
-
+    @if (session('access.denied'))
+    <div class="alert alert-success">
+        {{ session('access.denied') }}
+    </div>
+@endif
+@if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
 
 <div class="min-vh-100">
     {{ $slot }}

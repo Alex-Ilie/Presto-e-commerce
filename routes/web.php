@@ -24,3 +24,9 @@ Route::patch('/accetta/product/{product}', [RevisorController::class, 'acceptPro
 
 Route::patch('/rifiuta/product/{product}', [RevisorController::class, 'rejectProduct'])->middleware('isRevisor')->name('revisor.reject_product');
 
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
+
