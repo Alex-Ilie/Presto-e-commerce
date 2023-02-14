@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RevisorController;
 
 
 
@@ -16,4 +17,10 @@ Route::get('/products/index', [ProductController::class, 'index'])->name('produc
 Route::get('/products/show/{product}', [ProductController::class, 'show'])->name('products.show');
 
 Route::get('/category/show/{category}', [ProductController::class, 'showCategory'])->name('showCategory');
+
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
+
+Route::patch('/accetta/product/{product}', [RevisorController::class, 'acceptProduct'])->middleware('isRevisor')->name('revisor.accept_product');
+
+Route::patch('/rifiuta/product/{product}', [RevisorController::class, 'rejectProduct'])->middleware('isRevisor')->name('revisor.reject_product');
 

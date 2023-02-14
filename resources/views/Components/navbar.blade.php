@@ -18,6 +18,16 @@
           Benvenuto/a, {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          @if(Auth::user()->is_revisor)
+        <li>
+          <a class="dropdown-item text-dark" href="{{ route('revisor.index') }}">Zona revisore
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"> {{ App\Models\Product::toBeRevisionedCount() }}
+                <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+           
+        @endif
             <li>
               <a class="dropdown-item" href="{{ route('products.create') }}">Inserisci prodotto</a>
             </li>
