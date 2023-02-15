@@ -1,0 +1,8 @@
+.body {
+    background-color: #EAE2B7;
+    background-size: cover;
+    min-height: 75vh;
+}
+.textbox {
+    padding: 10px;
+}

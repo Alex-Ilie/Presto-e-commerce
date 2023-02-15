@@ -35,7 +35,7 @@ class RevisorController extends Controller
 
     public function rivediProduct(Product $product){
         $product->setAccepted(null);
-        return redirect()->back()->with('message', 'Complimenti, hai rimandato in revisione l\'annuncio');
+        return redirect()->route('revisor.index')->with('message', 'Complimenti, hai rimandato in revisione l\'annuncio');
 
     }
 

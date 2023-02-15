@@ -14,7 +14,7 @@
     <x-navbar />
     <x-navbar2 />
     @if (session('access.denied'))
-        <div class="alert alert-danger">
+        <div class="alert alert-danger mb-0">
             {{ session('access.denied') }}
         </div>
     @endif
@@ -30,8 +30,6 @@
     <div class="min-vh-100">
         {{ $slot }}
     </div>
-
-
     <x-footer />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     @livewireScripts

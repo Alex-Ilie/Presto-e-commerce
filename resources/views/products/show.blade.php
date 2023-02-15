@@ -1,10 +1,9 @@
-<x-layout>
-    <div class="container my-5">
-        <div class="row">
-            <h2>{{$product->title}}</h2>
-        </div>
-    </div>
-    <div class="container my-5">
+<x-navbar/>
+<x-navbar2/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+    <div class="body py-5">
+    <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -31,24 +30,29 @@
             </div>
             <div class="col-12 col-md-6">
                 @if(Auth::user()->is_revisor)
+                    <h2>{{$product->title}}</h2>
+                    <h5>€ {{$product->price}}</h5>
+                    <h5><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
+                    <h5><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
+                    <h5>Descrizione:</h5>
+                    <div class="textbox">
+                    <h5>{{$product->description}}</h5>
+                    </div>
                     <form  method="POST" action="{{route('revisor.rivedi_product', $product)}}">
                         @csrf
                         @method('PATCH')
                         <button type="submit" class="btn btn-success shadow">Rimanda in revisione</button>
                     </form>
-                    <h3>Descrizione:</h3>
-                    <p>{{$product->description}}</p>
-                    <p>Prezzo: € {{$product->price}}</p>
-                    <p>Inserito da: {{$product->user->name}}</p>
-                    <p>Inserito il: {{$product->created_at->format('d/m/Y')}}</p>
                 @else
-                    <h3>Descrizione:</h3>
-                    <p>{{$product->description}}</p>
-                    <p>Prezzo: € {{$product->price}}</p>
-                    <p>Inserito da: {{$product->user->name}}</p>
-                    <p>Inserito il: {{$product->created_at->format('d/m/Y')}}</p>
+                    <h2>{{$product->title}}</h2>
+                    <h5>€ {{$product->price}}</h5>
+                    <h5><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
+                    <h5><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
+                    <h5>Descrizione del prodotto:</h5>
+                    <h5>{{$product->description}}</h5>
                 @endif
             </div>
         </div>
     </div>
-</x-layout>
+</div>
+<x-footer/>

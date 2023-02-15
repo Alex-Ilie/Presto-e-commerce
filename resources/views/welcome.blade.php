@@ -2,7 +2,7 @@
 <x-masthead />
     <div class="container my-5">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12">
                 <h2 class="myh2">Prodotti inseriti di recente:</h2>
             </div>
         </div>

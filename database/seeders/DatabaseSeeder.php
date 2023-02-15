@@ -24,9 +24,9 @@ class DatabaseSeeder extends Seeder
              'password' => Hash::make('12345678')
          ]);
 
-         $categories =
+        $categories =
 
-         ['Elettronica', 'Abbigliamento', 'Arredamento', 'Motori', 'Lavoro', 'Sport', 'Giardinaggio', 'Hobby', 'Infanzia', 'Per animali',];
+        ['Elettronica', 'Abbigliamento', 'Arredamento', 'Motori', 'Lavoro', 'Sport', 'Giardinaggio', 'Hobby', 'Infanzia', 'Per animali',];
 
         foreach($categories as $name){
             Category::create([

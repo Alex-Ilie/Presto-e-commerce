@@ -12,12 +12,13 @@
             <form method="POST" action="{{route('become.revisor')}}">
                 @csrf
               <div class="form-outline mb-4">
-                <input name="name" type="text" placeholder="Nome" class="form-control form-control-lg" />
+                <input name="name" type="text" placeholder="Nome utente" class="form-control form-control-lg" />
               </div>
               <div class="form-outline mb-4">
-                <input name="email" type="email" placeholder="Email" id="typeEmailX-2" class="form-control form-control-lg" />
+                <input name="email" type="email" placeholder="E-mail" id="typeEmailX-2" class="form-control form-control-lg" />
               </div>
-              <a href="{{ route('become.revisor') }}" class="nav-link px-2 text-light btn button-35">Richiedi</a>
+             
+              <a href="{{ route('become.revisor') }}" class="nav-link px-2 text-light button-33">Inoltra la richiesta</a>
               <hr class="my-4">
               <a href="{{ route('home') }}" class="button-35" type="submit" >Torna alla Home</a>
             </form>

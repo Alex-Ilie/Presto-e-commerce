@@ -18,10 +18,5 @@
                 </div>
             @endif
         </div>
-        <div class="row">
-            <div class="col-12">
-                {{$products->links()}}
-            </div>
-        </div>
     </div>
 </x-layout>
