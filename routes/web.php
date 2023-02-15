@@ -10,7 +10,7 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
-Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::get('/products/create', [ProductController::class, 'create'])->middleware('auth')->name('products.create');
 
 Route::get('/products/index', [ProductController::class, 'index'])->name('products.index');
 
@@ -32,6 +32,10 @@ Route::get('/richiesta/revisore/form', [PublicController::class, 'formRevisor'])
 
 
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+Route::get('/ricerca/product', [PublicController::class, 'searchProducts'])->name('products.search');
+
+
 
 
 

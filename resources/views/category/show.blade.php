@@ -1,5 +1,5 @@
 <x-layout>
-<div class="container my-5">
+    <div class="container my-5">
         <div class="row">
             <h2>Tutti i prodotti della categoria {{$category->name}}</h2>
         </div>

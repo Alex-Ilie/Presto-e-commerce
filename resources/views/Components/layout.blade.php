@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @livewireStyles
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
+    <title>{{ $title ?? 'Presto.it' }}</title>
 </head>
 <body>
     <x-navbar />
     <x-navbar2 />
     @if (session('access.denied'))
-    <div class="alert alert-success">
-        {{ session('access.denied') }}
+        <div class="alert alert-danger">
+            {{ session('access.denied') }}
+        </div>
+    @endif
+    @if (session('message'))
+        <div class="row no-gutters ">
+            <div class="col-12">
+                <div class="alert alert-success fade show" role="alert">
+                    <h4 class="alert-heading">{{ session('message') }}</h4>
+                </div>
+            </div>
+        </div>
+    @endif
+    <div class="min-vh-100">
+        {{ $slot }}
     </div>
-@endif
-@if (session('message'))
-    <div class="alert alert-success">
-        {{ session('message') }}
-    </div>
-@endif
-
-<div class="min-vh-100">
-    {{ $slot }}
-</div>
-
 
 
     <x-footer />

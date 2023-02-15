@@ -15,6 +15,5 @@
         <p>Per farlo diventare revisore clicca qui:</p>
         <a href="{{ route('make.revisor', compact('user')) }}">Rendi revisore</a>
     </div>
-
 </body>
 </html>

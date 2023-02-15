@@ -13,11 +13,11 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         @foreach($products as $product)
-                        <div class="swiper-slide">
-                            <a href="{{route('products.show', $product)}}" class="text-decoration-none text-dark">
-                                <x-card-product :product="$product"/>
-                            </a>
-                        </div>
+                            <div class="swiper-slide">
+                                <a href="{{route('products.show', $product)}}" class="text-decoration-none text-dark">
+                                    <x-card-product :product="$product"/>
+                                </a>
+                            </div>
                         @endforeach
                     </div>
                         <br>
@@ -28,6 +28,4 @@
             </div>
         </div>
     </div>
-
-
 </x-layout>

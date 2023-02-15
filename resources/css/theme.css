@@ -68,6 +68,16 @@ body{
     }
 }
 
+.page-item{
+    background-color: #000000;
+    color: white;
+}
+
+.page-link{
+    background-color: red;
+    color: #F77F00;
+}
+
 
 
 

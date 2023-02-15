@@ -8,25 +8,18 @@
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card shadow-2-strong" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
-
             <h3 class="mb-5">Diventa revisore</h3>
             <form method="POST" action="{{route('become.revisor')}}">
                 @csrf
-
-            <div class="form-outline mb-4">
-              <input name="name" type="text" placeholder="Nome" class="form-control form-control-lg" />
-            </div>
-
-            <div class="form-outline mb-4">
+              <div class="form-outline mb-4">
+                <input name="name" type="text" placeholder="Nome" class="form-control form-control-lg" />
+              </div>
+              <div class="form-outline mb-4">
                 <input name="email" type="email" placeholder="Email" id="typeEmailX-2" class="form-control form-control-lg" />
               </div>
-
-
-      <li class="nav-item"><a href="{{ route('become.revisor') }}" class="nav-link px-2 text-light btn btn-warning">Richiedi</a></li>
-
-
-            <hr class="my-4">
-            <a href="{{ route('home') }}" class="button-35" type="submit" >Torna alla Home</a>
+              <a href="{{ route('become.revisor') }}" class="nav-link px-2 text-light btn button-35">Richiedi</a>
+              <hr class="my-4">
+              <a href="{{ route('home') }}" class="button-35" type="submit" >Torna alla Home</a>
             </form>
           </div>
         </div>
