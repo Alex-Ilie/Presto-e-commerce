@@ -6,7 +6,7 @@
       <li class="nav-item"><a href="#" class="nav-link px-2 text-light ">Pricing</a></li>
       <li class=" nav-item"><a href="#" class="nav-link px-2 text-light ">FAQs</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-light ">About</a></li>
-      <li class="nav-item"><a href="{{ route('become.revisor') }}" class="nav-link px-2 text-light btn btn-warning">Lavora con noi</a></li>
+      <li class="nav-item"><a href="{{ route('form.revisor') }}" class="nav-link px-2 text-light">Lavora con noi</a></li>
 
     </ul>
     <p class="text-center text-light">© 2023 Company, Inc</p>

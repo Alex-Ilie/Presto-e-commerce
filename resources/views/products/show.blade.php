@@ -30,11 +30,26 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
+                @if(Auth::user()->is_revisor)
+                <div class="col-12 col-md-6">
+                    <form  method="POST" action="{{route('revisor.rivedi_product', $product)}}">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-success shadow">Rimanda in revisione</button>
+                    </form>
+
                 <h3>Descrizione:</h3>
                 <p>{{$product->description}}</p>
                 <p>Prezzo: € {{$product->price}}</p>
                 <p>Inserito da: {{$product->user->name}}</p>
                 <p>Inserito il: {{$product->created_at->format('d/m/Y')}}</p>
+                @else
+                <h3>Descrizione:</h3>
+                <p>{{$product->description}}</p>
+                <p>Prezzo: € {{$product->price}}</p>
+                <p>Inserito da: {{$product->user->name}}</p>
+                <p>Inserito il: {{$product->created_at->format('d/m/Y')}}</p>
+                @endif
             </div>
         </div>
     </div>

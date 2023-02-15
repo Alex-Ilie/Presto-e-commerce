@@ -33,6 +33,12 @@ class RevisorController extends Controller
 
     }
 
+    public function rivediProduct(Product $product){
+        $product->setAccepted(null);
+        return redirect()->back()->with('message', 'Complimenti, hai rimandato in revisione l\'annuncio');
+
+    }
+
     public function becomeRevisor()
     {
         Mail::to('makeRevisor@example.com')->send(new BecomeRevisor(Auth::user()));
