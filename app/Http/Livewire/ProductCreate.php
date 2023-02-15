@@ -24,7 +24,7 @@ class ProductCreate extends Component
     [
         'title' => 'required|min:5|max:30',
         'price' => 'required',
-        'description' => 'required|min:20|max:300',
+        'description' => 'required|min:20',
     ];
 
     public function updated($propertyName)
