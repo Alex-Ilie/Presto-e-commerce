@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
@@ -15,7 +16,7 @@ class Product extends Model
 
     protected $fillable =
     [
-        'title', 'price', 'description', 'category_id', 'user_id', 'img'
+        'title', 'price', 'description', 'category_id', 'user_id',
     ];
 
     public function user()
@@ -51,6 +52,11 @@ class Product extends Model
         ];
 
         return $array;
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 
 }
