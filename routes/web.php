@@ -35,7 +35,7 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 Route::get('/ricerca/product', [PublicController::class, 'searchProducts'])->name('products.search');
 
-
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
 
 
 

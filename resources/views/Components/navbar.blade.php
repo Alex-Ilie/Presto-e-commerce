@@ -11,7 +11,12 @@
           <button class="my-button btn" type="submit">Cerca</button>
         </form>   
       </ul>
+
+
       <ul class="navbar-nav ms-auto">
+      <li class="nav-link"><x-_locale lang="it" /></li>
+      <li class="nav-link"><x-_locale lang="en" /></li>
+      <li class="nav-link"><x-_locale lang="es" /></li>
         <li class="nav-item dropdown">
           @auth
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

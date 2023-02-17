@@ -19,10 +19,12 @@
         </div>
     @endif
     @if (session('message'))
-        <div class="row no-gutters ">
-            <div class="col-12">
-                <div class="alert alert-success fade show" role="alert">
-                    <h4 class="alert-heading">{{ session('message') }}</h4>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">{{ session('message') }}</h4>
+                    </div>
                 </div>
             </div>
         </div>

@@ -13,12 +13,12 @@
                 @enderror
               </div>
               <div class="mb-3">
-                <select class="form-select" wire:model="category_id" aria-label="Default select example">
-                  <option value="">Scegli la categoria</option>
-                      @foreach ($categories as $category)
-                          <option value="{{$category->id}}">{{$category->name}}</option>
-                      @endforeach
-                </select>
+                  <select class="form-select" wire:model="category_id" aria-label="Default select example">
+                    <option value="">Scegli la categoria</option>
+                        @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
+                  </select>
               </div>
               <div class="form-outline mb-4">
                 <textarea wire:model="description" placeholder="Descrizione del prodotto" class="form-control form-control-lg" id="" cols="30" rows="10"></textarea>
