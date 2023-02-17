@@ -19,12 +19,12 @@
                 @if ($product_to_check->images)
                     <div class="carousel-inner">
                         @foreach ($product_to_check->images as $image)
-                            
+
                             <div class="carousel-item active @if($loop->first)active @endif">
                                 <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
                             </div>
                         @endforeach
-                    </div>   
+                    </div>
                     @else
                     <div class="carousel-inner">
                         <div class="carousel-item">
@@ -48,30 +48,30 @@
             </div>
             <div class="col-12 col-md-6">
         <h2>{{ $product_to_check->title }}</h2>
-        <h5>Prezzo: € {{$product_to_check->price}}</h5>
+        <h5>{{ __('ui.productPrice') }} € {{$product_to_check->price}}</h5>
         <h5><i class="fa-solid fa-calendar-days"></i> {{$product_to_check->created_at->format('d/m/Y')}}</h5>
         <h5><i class="fa-solid fa-user"></i> {{$product_to_check->user->name}}</h5>
-        <h5>Descrizione del prodotto:</h5>
+        <h5>{{ __('ui.productDescription') }}</h5>
         <h5>{{$product_to_check->description}}</h5>
-       
-        
-        
+
+
+
     <div class="d-flex mx-auto">
         <div class="mx-2">
         <form  method="POST" action="{{route('revisor.accept_product', ['product' => $product_to_check])}}">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-success shadow">Accetta</button>
-                </form> 
+                        <button type="submit" class="btn btn-success shadow">{{ __('ui.btnAccept') }}</button>
+                </form>
         </div>
         <div class="mx-2" >
         <form  method="POST" action="{{route('revisor.reject_product', ['product' => $product_to_check])}}">
                         @csrf
                         @method('PATCH')
-                        <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
-                </form>    
+                        <button type="submit" class="btn btn-danger shadow">{{ __('ui.btnDecline') }}</button>
+                </form>
 
-        </div> 
+        </div>
 
     </div>
             </div>

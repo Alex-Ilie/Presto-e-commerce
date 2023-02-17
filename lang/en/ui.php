@@ -1,6 +1,41 @@
 <?php
 
 return [
-    'allProducts' => 'All products!'
+    'allProducts' => 'All products!',
+    'highlights' => 'Categories highlights',
+    'search' => 'Search',
+    'welcome' => 'Welcome',
+    'revisorZone' => 'Revisor zone',
+    'unread messages' => 'Unread messages',
+    'insertProduct' => 'Insert product',
+    'logout' => 'Logout',
+    'register' => 'Register',
+    'login' => 'Login',
+    'slogan' => 'The best products at a click',
+    'sell' => 'Sell',
+    'buy' => 'Buy',
+    'workWithUs' => 'Careers',
+    'btnDetails' => 'Details',
+    'categoriesCard' => 'Categories',
+    'insertProduct' => 'Insert product',
+    'chooseCategory' => 'Choose a category',
+    'productName' => 'Product Name',
+    'productDescription' => 'Product Description:',
+    'photoPreview' => 'Photo preview',
+    'photoDelete' => 'Delete',
+    'productPrice' => 'Price:',
+    'revisorRequest' => 'A user has requested to work with us',
+    'revisorData' => 'Here is the data:',
+    'makeRevisor' => 'To make him become a revisor click here:',
+    'btnRevisor' => 'Make Revisor',
+    'noProducts' => 'There are no products available',
+    'btnSendinRevision' => 'Send in revision',
+    'becomeRevisor' => 'Become revisor',
+    'sendRequest' => 'Send request',
+    'btnHome' => 'Back Home',
+    'userName' => 'User name',
+    'btnAccept' => 'Accept',
+    'btnDecline' => 'Decline',
+    'productsToCheck' => 'Products to check',
 
-]; 
+];

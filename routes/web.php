@@ -26,7 +26,7 @@ Route::patch('/rifiuta/product/{product}', [RevisorController::class, 'rejectPro
 Route::patch('/rivedi/product/{product}', [RevisorController::class, 'rivediProduct'])->middleware('isRevisor')->name('revisor.rivedi_product');
 
 
-Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/richiesta/revisore/form', [PublicController::class, 'formRevisor'])->name('form.revisor');
 

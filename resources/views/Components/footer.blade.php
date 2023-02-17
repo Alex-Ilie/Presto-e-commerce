@@ -17,7 +17,7 @@
         <a href="#" class="nav-link nav-link3 px-2 text-light ">About</a>
         </li>
       <li class="nav-item">
-        <a href="{{ route('form.revisor') }}" class="nav-link nav-link3 px-2 text-light">Lavora con noi</a>
+        <a href="{{ route('form.revisor') }}" class="nav-link nav-link3 px-2 text-light">{{ __('ui.workWithUs') }}</a>
       </li>
     </ul>
     <p class="text-center text-light">© 2023 Company, Inc</p>

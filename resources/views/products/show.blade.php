@@ -33,21 +33,21 @@
                         <h5>€ {{$product->price}}</h5>
                         <h5><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
                         <h5><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
-                        <h5>Descrizione:</h5>
+                        <h5>{{ __('ui.productDescription') }}</h5>
                         <div class="textbox">
                         <h5>{{$product->description}}</h5>
                         </div>
                         <form  method="POST" action="{{route('revisor.rivedi_product', $product)}}">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Rimanda in revisione</button>
+                            <button type="submit" class="btn btn-success shadow">{{ __('ui.btnSendinRevision') }}</button>
                         </form>
                     @else
                         <h2>{{$product->title}}</h2>
                         <h5>€ {{$product->price}}</h5>
                         <h5><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
                         <h5><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
-                        <h5>Descrizione del prodotto:</h5>
+                        <h5>{{ __('ui.productDescription') }}</h5>
                         <h5>{{$product->description}}</h5>
                     @endif
                 </div>

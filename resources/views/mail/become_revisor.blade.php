@@ -8,12 +8,12 @@
 </head>
 <body>
     <div>
-        <h1>Un utente ha richiesto di lavorare con noi</h1>
-        <h2>Ecco i dati:</h2>
+        <h1>{{ __('ui.revisorRequest') }}</h1>
+        <h2>{{ __('ui.revisorData') }}</h2>
         <p>Nome: {{ $user->name }}</p>
         <p>Email: {{ $user->email }}</p>
-        <p>Per farlo diventare revisore clicca qui:</p>
-        <a href="{{ route('make.revisor', compact('user')) }}">Rendi revisore</a>
+        <p>{{ __('ui.makeRevisor') }}</p>
+        <a href="{{ route('make.revisor', compact('user')) }}">{{ __('ui.btnRevisor') }}</a>
     </div>
 </body>
 </html>
