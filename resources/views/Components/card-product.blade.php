@@ -1,5 +1,5 @@
 <div class="card mycard" style="width: 18rem;">
-  <img src="{{Storage::url($product->img)}}" class=" myimg card-img-top " alt="{{$product->title}}">
+  <img src="{{!$product->images()->get()->isEmpty() ? Storage::url($product->images()->first()->path) : 'https://picsum.photos/200/300'}}" class=" myimg card-img-top " alt="{{$product->title}}">
   <div class="card-body">
     <h5 class="card-title text-dark ">{{$product->title}}</h5>
     <b><p class="card-text">Categoria: </b><a href="{{route('showCategory', ['category' => $product->category])}}" class="text-decoration-none textprova">{{$product->category->name}}</a></p>

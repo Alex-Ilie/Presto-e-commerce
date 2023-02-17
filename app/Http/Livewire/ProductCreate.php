@@ -16,8 +16,11 @@ class ProductCreate extends Component
     public $price;
     public $description;
     public $img;
+    public $images = [];
+    public $temporary_images;
     public $category_id;
     public $user_id;
+    public $products;
 
 
     protected $rules =
@@ -25,7 +28,39 @@ class ProductCreate extends Component
         'title' => 'required|min:5|max:30',
         'price' => 'required',
         'description' => 'required|min:20',
+        'images.*'=> 'image|max:1024',
+        'temporary_images.*'=> 'image|max:1024',
     ];
+
+    protected $messages = [
+        'required' => 'Il campo :attribute è richiesto',
+        'min' => 'Il campo :attribute è troppo corto',
+        'temporary_images.required' => 'L\'immagine è richiesta',
+        'temporary_images-*.image' => 'I file devono essere immagini',
+        'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 1mb',
+        'images.image' => 'L\'immagine dev\'essere massimo di 1mb',
+    ];
+
+    public function updatedTemporaryImages()
+    {
+        if($this->validate([
+            'temporary_images.*'=> 'image|max:1024',
+        ])){
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
+
+
+
 
     public function updated($propertyName)
     {
@@ -36,16 +71,6 @@ class ProductCreate extends Component
 
         $this->validate();
 
-
-        if($this->img == null)
-        {
-            $img = "no-image.jpg";
-        }else{
-            $img = $this->img->store('public/products');
-        }
-
-
-
         $product = Auth::user()->products()->create(
             [
             'title' => $this->title,
@@ -53,15 +78,48 @@ class ProductCreate extends Component
             'description' => $this->description,
             'category_id' => $this->category_id,
             'user_id' => Auth::user()->id,
-            'img' => $img,
+            'images' => $this->images,
             ]);
+
+            if(count($this->images)){
+                foreach ($this->images as $image){
+                    $product->images()->create(['path' => $image->store('images', 'public')]);
+                }
+            }
+
         $this->reset();
         return redirect()->route('products.index')->with('message', "Prodotto caricato!");
 
+        // $this->product = Auth::user()->products()->create($this->validate());
+        //  if(count($this->images)){
+        //      foreach ($this->images as $image){
+        //          $this->product->images()->create(['path' => $image->store('images', 'public')]);
+        //      }
+        //  }
+        // session()->flash('message', 'Articolo inserito con successo, sarà pubblicato dopo la revisione');
+        $this->cleanForm();
 
 
-
+        // if($this->img == null)
+        // {
+        //     $img = "no-image.jpg";
+        // }else{
+        //     $img = $this->img->store('public/products');
+        // }
     }
+    
+    public function cleanForm()
+        {
+        $this->title = '';
+        $this->price = '';
+        $this->description = '';
+        $this->img = '';
+        $this->images = [];
+        $this->temporary_images =[];
+        $this->category_id = '';
+        $this->form_id = rand();
+        $this->user_id = '';
+        }
 
 
 

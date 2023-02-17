@@ -19,9 +19,12 @@
               </div>
               <button class="button-33" type="submit">Accedi</button>
               <hr class="my-4">
-              <a href="{{ route('home') }}" class="button-35" type="submit" >Torna alla Home</a>
-              <hr class="my-4">
-              <a href="{{ route('register') }}">Non hai un account?Registrati qui!</a>
+              <div>
+                <a href="{{ route('home') }}" class="button-35" type="submit" >Torna alla home</a>
+              </div>
+              <div class="mt-3">
+                <a href="{{ route('register') }}" class="text-decoration-none">Non hai un account? Registrati qui!</a>
+              </div>
             </form>
           </div>
         </div>
