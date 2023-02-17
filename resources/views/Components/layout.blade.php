@@ -19,12 +19,8 @@
         </div>
     @endif
     @if (session('message'))
-        <div class="row no-gutters ">
-            <div class="col-12">
-                <div class="alert alert-success fade show" role="alert">
-                    <h4 class="alert-heading">{{ session('message') }}</h4>
-                </div>
-            </div>
+        <div class="alert alert-success mb-0">
+            {{ session('message') }}
         </div>
     @endif
     <div class="min-vh-100">

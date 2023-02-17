@@ -3,7 +3,37 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12">
-                <h2 class="myh2">Prodotti inseriti di recente:</h2>
+                <h2 class="myh2">Categorie più cercate</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row justify-content-around">
+            @foreach($categories as $category)
+                <div class="col-12 col-md-2 m-2">
+                    <a href="{{route('showCategory', $category)}}">
+                        <div class="card text-bg-dark category-card">
+                            @if($category->name == 'Elettronica')
+                                <img src="{{Storage::url('elettronica.jpg')}}" class="card-img" alt="{{$category->name}}">
+                                <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                    <h5 class="card-title">{{$category->name}}</h5>
+                                </div>
+                            @else
+                                <img src="https://picsum.photos/200" class="card-img" alt="{{$category->name}}">
+                                <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                                    <h5 class="card-title">{{$category->name}}</h5>
+                                </div>
+                            @endif
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="myh2">Prodotti inseriti di recente</h2>
             </div>
         </div>
     </div>

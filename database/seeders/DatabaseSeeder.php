@@ -19,21 +19,44 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-         \App\Models\User::factory()->create([
-             'name' => 'User',
-             'email' => 'test@example.com',
-             'password' => Hash::make('12345678')
-         ]);
+        \App\Models\User::factory()->create([
+            'name' => 'User',
+            'email' => 'test@example.com',
+            'password' => Hash::make('12345678'),
+            'is_revisor' => 1,
+        ]);
 
-        $categories =
+        $categories = [
 
-        ['Elettronica', 'Abbigliamento', 'Arredamento', 'Motori', 'Lavoro', 'Sport', 'Giardinaggio', 'Hobby', 'Infanzia', 'Per animali',];
+            ['name' => 'Elettronica',
+            'image' => '\elettronica.jpg'],
+            ['name' => 'Abbigliamento',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Arredamento',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Motori',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Lavoro',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Sport',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Giardinaggio',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Hobby',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Infanzia',
+            'image' => 'elettronica.jpg'],
+            ['name' => 'Per animali',
+            'image' => 'elettronica.jpg'],
+        ];
 
-        foreach($categories as $name){
+        foreach ($categories as $category) {
             Category::create([
-                'name'=>$name
+                'name' => $category['name'],
+                'image' => $category['image'],
             ]);
         }
+
 
         $products = [
             [
@@ -51,9 +74,7 @@ class DatabaseSeeder extends Seeder
                                   Compatibilità con gli accessori MagSafe: aggancio rapido e ricarica wireless più veloce",
                 'category_id' => 1,
                 'user_id' => 1,
-
             ],
-
             [
                 'title' => 'Air Jordan 1 Mid',
                 'price' => '129.99',
@@ -69,10 +90,7 @@ class DatabaseSeeder extends Seeder
                                   Stile: 554724-174",
                 'category_id' => 2,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'Divano angolare 4 posti in tessuto',
                 'price' => '2349',
@@ -89,17 +107,13 @@ class DatabaseSeeder extends Seeder
                                   I piedi si trovano all'interno del corpo del divano in prossimità della cerniera sul lato inferiore.",
                 'category_id' => 3,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'Alfa Romeo 8C',
                 'price' => '299.000',
                 'description' => "Alfa Romeo 8C è una vettura che nacque come semplice Concept Car al Salone di Francoforte del 2003, ma che dopo un entusiasmo incredibile del pubblico diventò realtà nel 2007. Alfa Romeo 8C è realmente una scultura su ruote, una vettura dove ogni linea è studiata per essere bellissima e unica, riportando nel XXI secolo linee e proporzioni senza tempo. Nonostante poi all’atto pratico non fosse così speciale alla guida, sviluppata a sei mani tra Maserati, Alfa Romeo e Dallara, Alfa Romeo 8C è stata un successo commerciale e mediatico eccezionale. Il suo stile ha segnato il nuovo corso stilistico di Alfa Romeo, il suo successo ha aiutato a spingere le vendite delle auto più tradizionali del Biscione ed oggi, a 15 anni dalla sua nascita, è una delle automobili moderne più ricercate e amate.",
                 'category_id' => 4,
                 'user_id' => 1,
-                
             ],
             [
                 'title' => 'Web Developer',
@@ -122,20 +136,14 @@ class DatabaseSeeder extends Seeder
                                   Sede di lavoro: Un'unica sede",
                 'category_id' => 5,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'Set snowboard Stylus',
                 'price' => '380',
                 'description' => "Lo snowboard Stylus ha un guscio in legno rinforzato in fibra di vetro leggero, flessibile e robusto. È incollato con una colla Super Sap, un'alternativa più ecologica alla resina epossidica, una colla tossica solitamente utilizzata nella produzione di snowboard. Ecco uno snowboard con una costruzione di qualità, proposto a un prezzo piuttosto ragionevole e che permette di progredire senza problemi in tutta la località.",
                 'category_id' => 6,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'Terriccio GEOLIA universale 45 L',
                 'price' => '3',
@@ -146,30 +154,21 @@ class DatabaseSeeder extends Seeder
                                   La presenza di sostanza organica vegetale umificata ed un bilanciato rapporto di macro e microelementi, naturalmente presenti, garantiscono un graduale e costante nutrimento delle piante ospiti.",
                 'category_id' => 7,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'Millennium Falcon Lego',
                 'price' => '849.99',
                 'description' => "Ti presentiamo il modello più grande e più dettagliato del Millennium Falcon LEGO® Star Wars mai creato! E con 7.500 pezzi, è sicuramente uno dei modelli LEGO più grandi in assoluto! Questa fantastica interpretazione LEGO dell’indimenticabile nave da trasporto corelliana di Ian Solo ha tutti i dettagli che i fan di Star Wars di ogni età possono desiderare, tra cui intricati particolari esterni, parabole sensore intercambiabili, cannoni a quattro laser superiori e inferiori, gambe di atterraggio, rampa di imbarco abbassabile e una cabina di pilotaggio per 4 minifigure con tettuccio rimovibile. Rimuovi i pannelli individuali della fusoliera per rivelare la sezione principale, altamente dettagliata, il compartimento posteriore e la stazione di artiglieria. Questo fantastico modello è dotato di parabole sensore ed equipaggio intercambiabili per rivivere le classiche avventure LEGO Star Wars con Ian, Leia, Chewbecca e C-3PO o quelle degli Episodi VII e VIII con il vecchio Ian, Rey, Finn e BB-8!",
                 'category_id' => 8,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'PegPerego SELFIE',
                 'price' => '319.99',
                 'description' => "Selfie è il passeggino leggero e compatto, adatto dalla nascita fino a 17Kg che esibisce caratteristiche di tendenza e funzionalità urban. Il passeggino Selfie pensa a tutto. Fin dalla nascita del tuo bebè, ti lascia più libertà nel chiudersi da solo, e sempre con una mano sola, lo apri e lo guidi con grande comodità. Selfie ti permette di vivere la vita con leggerezza grazie al suo peso ridotto e alla facilità nel viaggiare comodamente anche sui terreni più sconnessi. Le prestazioni off-road sono garantite dagli ammortizzatori con cuscinetti a sfera, le ruote piroettanti, i molleggi anteriori e posteriori",
                 'category_id' => 9,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'DOGVILLA',
                 'price' => '95',
@@ -181,29 +180,21 @@ class DatabaseSeeder extends Seeder
                                   Dogvilla è un prodotto ecosostenibile: è infatti realizzato con materiale proveniente da riciclo industriale e post-consumo, per la salvaguardia dell’ambiente in cui viviamo insieme ai nostri amici animali.",
                 'category_id' => 10,
                 'user_id' => 1,
-                
             ],
-
             [
                 'title' => 'SONY - PS5 DIGITAL C + GOD OF WAR: RAGNAROK',
                 'price' => '659.99',
                 'description' => "Console fissa - Piattaforma PS5 - Con porta di rete (Ethernet) - Bluetooth 5.1 - HDMI - USB - Play Has No Limits PlayStation5 PS5 offre nuove possibilità di gioco che non ti saresti mai aspettato. Prova un caricamento ultra rapido con un'unità SSD ad altissima velocità, un coinvolgimento ancora maggiore grazie al supporto per il feedback aptico, ai grilletti adattivi e all'audio 3D e scopri una nuova generazione di incredibili giochi PlayStation Velocità Incredibile La potenza di CPU, GPU e unità SSD personalizzate con sistema I/O integrato permette prestazioni mai viste prima su una console PlayStation. Giochi Straordinari Lasciati stupire da una grafica incredibile e scopri le nuove funzionalità di PS5. Immersione Mozzafiato Scopri un'esperienza di gioco più profonda grazie al supporto per il feedback aptico, ai grilletti adattivi e alla tecnologia audio 3D.",
                 'category_id' => 1,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'BMW 118',
                 'price' => '23.900',
                 'description' => "Con il lancio della terza, rivoluzionaria generazione di Serie 1, la F40, la 118 rimane un baluardo per via della trazione al posto giusto, dando giustizia allo schema meccanico, oggi già con una BMW 118 si può godere di un’ottima guidabilità e di prestazioni vivaci indipendentemente dall’alimentazione, grazie ai moderni 1.5 tre cilindri turbo rubato dalla 118 sotto il cofano, oltre all’immancabile 2.0 litri da 150 cavalli.",
                 'category_id' => 4,
                 'user_id' => 1,
-                
-
             ],
-
             [
                 'title' => 'Borsa Valentino',
                 'price' => '54.99',
@@ -213,19 +204,17 @@ class DatabaseSeeder extends Seeder
                                   Codice articolo: 5VA51F00Z-J12",
                 'category_id' => 2,
                 'user_id' => 1,
-                
             ]
-            ];
+        ];
 
-            foreach ($products as $product) {
-                Product::create([
-                    'title' => $product['title'],
-                    'price' => $product['price'],
-                    'description' => $product['description'],
-                    'category_id' => $product['category_id'],
-                    'user_id' => $product['user_id'],
-                    
-                ]);
-            }
+        foreach ($products as $product) {
+            Product::create([
+                'title' => $product['title'],
+                'price' => $product['price'],
+                'description' => $product['description'],
+                'category_id' => $product['category_id'],
+                'user_id' => $product['user_id'],
+            ]);
+        }
     }
 }

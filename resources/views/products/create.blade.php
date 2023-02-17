@@ -6,7 +6,9 @@
             </div>
         </div>
     </div>
-        <div class="row">
-            <livewire:product-create/>
+        <div class="container-fluid">
+            <div class="row">
+                <livewire:product-create/>
+            </div>
         </div>
 </x-layout>
