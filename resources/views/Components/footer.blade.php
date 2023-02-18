@@ -20,6 +20,6 @@
         <a href="{{ route('form.revisor') }}" class="nav-link nav-link3 px-2 text-light">{{ __('ui.workWithUs') }}</a>
       </li>
     </ul>
-    <p class="text-center text-light">© 2023 Company, Inc</p>
+    <p class="text-center text-light">© 2023 Presto.it</p>
   </footer>
 </div>

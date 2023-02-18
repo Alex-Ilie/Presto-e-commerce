@@ -25,3 +25,24 @@
     border-bottom: 1px solid var(--main-red);
     
 }
+
+.cardEvidenza {
+    color: white;
+    border-color: var(--main-blue);
+    width: 190px;
+    transition: all 0.7s ease;
+  }
+  
+  .cardEvidenza:hover {
+    transform: scale(1.2);
+    font-size: 18px;
+    color: var(--main-blue);
+    width: 220px;
+  }
+  
+  .cardEvidenza:hover + .card {
+    width: 190px;
+  }
+  
+  
+  

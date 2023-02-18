@@ -12,16 +12,16 @@
             @foreach($categories as $category)
                 <div class="col-12 col-md-2 m-2">
                     <a href="{{route('showCategory', $category)}}">
-                        <div class="card text-bg-dark category-card">
+                        <div class=" cardEvidenza card text-bg-dark category-card">
                             @if($category->name == 'Elettronica')
-                                <img src="{{Storage::url('imgsProdotti\Elettronica\iPhone\iphone.jpg')}}" class="card-img" alt="{{$category->name}}">
-                                <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                                    <h5 class="card-title">{{$category->name}}</h5>
+                                <img src="{{Storage::url('imgsProdotti\Elettronica\iPhone\iphone.jpg')}}" class=" card-img" alt="{{$category->name}}">
+                                <div class=" cardEvidenza card-img-overlay d-flex align-items-center justify-content-center">
+                                    <h5 class=" cardEvidenza card-title">{{$category->name}}</h5>
                                 </div>
                             @else
                                 <img src="https://picsum.photos/200" class="card-img" alt="{{$category->name}}">
-                                <div class="card-img-overlay d-flex align-items-center justify-content-center">
-                                    <h5 class="card-title">{{$category->name}}</h5>
+                                <div class=" cardEvidenza card-img-overlay d-flex align-items-center justify-content-center">
+                                    <h5 class=" cardEvidenza card-title">{{$category->name}}</h5>
                                 </div>
                             @endif
                         </div>
