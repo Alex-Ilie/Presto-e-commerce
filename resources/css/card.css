@@ -43,6 +43,10 @@
   .cardEvidenza:hover + .card {
     width: 190px;
   }
+
+  .h-card-evidenza{
+    min-height: 300px;
+  }
   
   
   

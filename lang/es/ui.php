@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'allProducts' => 'Aqui los productos!',
+    'allProducts' => 'Los últimos productos',
+    'chooseLang' => 'Elige el idioma',
     'highlights' => 'Categorías de relieve',
     'search' => 'Busca',
     'welcome' => 'Bienvenido',

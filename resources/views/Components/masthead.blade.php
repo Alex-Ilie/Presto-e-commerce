@@ -6,7 +6,7 @@
       <div class="col-12 col-md-6 text-center masthead-text">
         <h1 class="my-text display-2 fw-bold">Presto.it</h1>
         <p class="my-text2 fs-2 fw-bold">{{ __('ui.slogan') }}</p>
-        <div class="">
+        <div>
           @if (Auth::user() ==null )
           <a href="{{route('login')}}"> <button class="button-34 me-5">{{ __('ui.sell') }}</button></a>
           @else

@@ -22,7 +22,7 @@ class ProductCreate extends Component
     public $temporary_images;
     public $category_id;
     public $user_id;
-    public $products;
+    public $product;
 
 
     protected $rules =
@@ -73,7 +73,7 @@ class ProductCreate extends Component
 
         $this->validate();
 
-        $product = Auth::user()->products()->create(
+        $this->product = Auth::user()->products()->create(
             [
             'title' => $this->title,
             'price' => $this->price,
