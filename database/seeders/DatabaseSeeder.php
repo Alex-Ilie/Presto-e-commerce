@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Elettronica',
             'en' => 'Technology',
             'es' => 'Electronicas',
-            'image' => 'elettronica.jpg',],
+            'image' => '\elettronica.jpg',],
             ['name' => 'Abbigliamento',
             'en' => 'Clothing',
             'es' => 'Ropa',

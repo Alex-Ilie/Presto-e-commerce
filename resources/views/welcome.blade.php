@@ -14,7 +14,7 @@
                     <a href="{{route('showCategory', $category)}}">
                         <div class="card text-bg-dark category-card">
                             @if($category->name == 'Elettronica')
-                                <img src="{{Storage::url('imgsProdotti\Elettronica\iPhone\iphone.jpg')}}" class="card-img" alt="{{$category->name}}">
+                                <img src="{{Storage::url($category->image)}}" class="card-img" alt="{{$category->name}}">
                                 <div class="card-img-overlay d-flex align-items-center justify-content-center">
                                     <h5 class="card-title">{{$category->name}}</h5>
                                 </div>
