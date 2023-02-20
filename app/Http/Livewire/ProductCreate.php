@@ -30,8 +30,8 @@ class ProductCreate extends Component
         'title' => 'required|min:5|max:30',
         'price' => 'required',
         'description' => 'required|min:20',
-        'images.*'=> 'image|max:1024',
-        'temporary_images.*'=> 'image|max:1024',
+        'images.*'=> 'image|max:3072',
+        'temporary_images.*'=> 'image|max:3072',
     ];
 
     protected $messages = [
@@ -45,8 +45,9 @@ class ProductCreate extends Component
 
     public function updatedTemporaryImages()
     {
+      
         if($this->validate([
-            'temporary_images.*'=> 'image|max:1024',
+            'temporary_images.*'=> 'image|max:3072',
         ])){
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
