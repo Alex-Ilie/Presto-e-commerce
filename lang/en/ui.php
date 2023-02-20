@@ -38,5 +38,11 @@ return [
     'btnAccept' => 'Accept',
     'btnDecline' => 'Decline',
     'productsToCheck' => 'Products to check',
+    'furniture' => 'Furniture',
+    'gardening' => 'Gardening', 
+    'hobby' => 'Hobbies', 
+    'clothing' => 'Clothing',
+    'viewCategory' => 'Our product category',
+
 
 ];

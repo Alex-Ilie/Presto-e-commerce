@@ -38,9 +38,11 @@ return [
     'btnAccept' => 'Accetta',
     'btnDecline' => 'Rifiuta',
     'productsToCheck' => 'Prodotti da revisionare',
-
-
-
+    'furniture' => 'Arredamento', 
+    'gardening' => 'Giardinaggio', 
+    'hobby' => 'Hobbies', 
+    'clothing' => 'Abbigliamento',
+    'viewCategory' => 'Tutti i prodotto della categoria'
 
 
 

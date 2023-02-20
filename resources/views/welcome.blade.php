@@ -2,37 +2,58 @@
     <x-masthead />
     <div class="container my-5">
         <div class="row">
-            <div class="col-12 d-flex justify-content-center col-md-6">
+            <div class="col-12 d-flex  col-md-6">
                 <h2 class="myh2">{{ __('ui.highlights') }}</h2>
             </div>
         </div>
     </div>
     <div class="container my-5">
-        <div class="row justify-content-around align-items-center h-card-evidenza">
-            @foreach($categories as $category)
-                <div class="col-12 d-flex justify-content-center mt-0 col-md-2 m-2 mb-2 mt-3">
-                    <a href="{{route('showCategory', $category)}}">
-                        <div class=" cardEvidenza card text-bg-dark category-card">
-                            @if($category->name == 'Elettronica')
-                                <img src="{{Storage::url('imgsProdotti\Elettronica\iPhone\iphone.jpg')}}" class=" card-img" alt="{{$category->name}}">
-                                <div class=" cardEvidenza card-img-overlay d-flex align-items-center justify-content-center">
-                                    <h5 class=" cardEvidenza card-title">{{$category->name}}</h5>
-                                </div>
-                            @else
-                                <img src="https://picsum.photos/200" class="card-img" alt="{{$category->name}}">
-                                <div class=" cardEvidenza card-img-overlay d-flex align-items-center justify-content-center">
-                                    <h5 class=" cardEvidenza card-title">{{$category->name}}</h5>
-                                </div>
-                            @endif
-                        </div>
-                    </a>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 d-flex p-0">
+                <div class="col-6">
+                    <div>
+                        <a class="text-decoration-none" href="/category/show/3">
+                            <div class=" cardEvidenza card text-bg-dark category-card">
+                                <h3 class="myh5 display-5">{{ __('ui.furniture') }}</h3>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            @endforeach
-        </div>
+                <div class="col-6 ">
+                    <div>
+                        <a class="text-decoration-none" href="/category/show/7">
+                            <div class=" cardEvidenza2 card text-bg-dark category-card">
+                                <h3 class="myh5 display-5">{{ __('ui.gardening') }}</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 p-0">
+                    <div class="row">
+                        <div>
+                            <a class="text-decoration-none" href="/category/show/8">
+                                <div class=" cardOrizzontale card text-bg-dark category-card">
+                                    <h3 class="myh3 display-5">{{ __('ui.hobby') }}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <a class="text-decoration-none" href="/category/show/2">
+                                <div class=" cardOrizzontale2 card text-bg-dark category-card">
+                                    <h3 class="myh3 display-5">{{ __('ui.clothing') }}</h3>
+                                </div>
+                            </a> 
+                        </div>
+                    </div>
+            </div>
+         </div>
     </div>
         <div class="container my-5">
             <div class="row">
-                <div class="col-12 d-flex justify-content-center col-md-6">
+                <div class="col-12 d-flex col-md-6">
                     <h2 class="myh2">{{__('ui.allProducts')}}</h2>
                 </div>
             </div>

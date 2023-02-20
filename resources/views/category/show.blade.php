@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container my-5">
         <div class="row">
-            <h2>Tutti i prodotti della categoria {{$category->name}}</h2>
+            <h2>{{ __('ui.viewCategory') }} {{$category->name}}</h2>
         </div>
     </div>
     <div class="container my-5">
@@ -14,7 +14,7 @@
                 @endforeach
             @else
                 <div class="col-12">
-                    <h3>Non ci sono prodotti disponibili</h3>
+                    <h3>{{ __('ui.noProducts') }}</h3>
                 </div>
             @endif
         </div>

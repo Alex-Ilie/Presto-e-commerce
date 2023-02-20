@@ -38,8 +38,11 @@ return [
     'btnAccept' => 'Aceptar',
     'btnDecline' => 'Rechazar',
     'productsToCheck' => 'Productos qurevisarsee deben ',
-
-
+    'furniture' => 'Muebles',
+    'gardening' => 'Jardineria', 
+    'hobby' => 'Hobbies', 
+    'clothing' => 'Ropa',
+    'viewCategory' => 'Todos los productos de la categoría'
 
 
 ];
