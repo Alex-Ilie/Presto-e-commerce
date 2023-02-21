@@ -3,7 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>{{ $product_to_check ? 'Annunci da revisionare:': 'Non ci sono annunci da revisionare.' }}</h2>
+                @if($product_to_check == null)
+                    <h2>Non ci sono annunci da revisionare.</h2>
+                @else
+                    <h2>Annunci da revisionare</h2>
+                @endif
             </div>
         </div>
     </div>
@@ -16,7 +20,7 @@
                             <div class="carousel-inner">
                                 @foreach ($product_to_check->images as $image)
                                     <div class="carousel-item active @if($loop->first)active @endif">
-                                        <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                                        <img src="{{$image->getUrl(300, 300)}}" class="d-block w-100" alt="...">
                                     </div>
                                 @endforeach
                             </div>

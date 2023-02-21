@@ -1,4 +1,4 @@
-@vite(['resources/css/app.css', 'resources/js/app.js'])
+<x-layout>
 <section class="vh-100 bg-image-vertical">
   <center>
       <a href="{{ route('home') }}"><img src="/img/loghetto.png" class="loghetto mt-5" alt="logo2"></a>
@@ -27,3 +27,4 @@
     </div>
   </div>
 </section>
+</x-layout>

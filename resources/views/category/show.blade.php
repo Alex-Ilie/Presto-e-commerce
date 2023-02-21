@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container my-5">
         <div class="row">
-            <h2>{{ __('ui.viewCategory') }} {{$category->name}}</h2>
+            <h2 class="inEvidenza">{{ __('ui.viewCategory') }} @if (session('locale') == 'en'){{$category->en}} @endif @if (session('locale') == 'es'){{$category->es}} @endif @if (session('locale') == 'it'){{$category->name}} @endif</h2>
         </div>
     </div>
     <div class="container my-5">
@@ -14,7 +14,7 @@
                 @endforeach
             @else
                 <div class="col-12">
-                    <h3>{{ __('ui.noProducts') }}</h3>
+                    <h3 class="inEvidenza">{{ __('ui.noProducts') }}</h3>
                 </div>
             @endif
         </div>

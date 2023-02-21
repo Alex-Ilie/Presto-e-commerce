@@ -3,7 +3,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-12 d-flex  col-md-6">
-                <h2 class="myh2">{{ __('ui.highlights') }}</h2>
+                <h2 class="myh2 inEvidenza">{{ __('ui.highlights') }}</h2>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="container my-5">
             <div class="row">
                 <div class="col-12 d-flex col-md-6">
-                    <h2 class="myh2">{{__('ui.allProducts')}}</h2>
+                    <h2 class="myh2 inEvidenza">{{__('ui.allProducts')}}</h2>
                 </div>
             </div>
         </div>

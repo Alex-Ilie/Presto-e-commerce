@@ -10,7 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{ $title ?? 'Presto.it' }}</title>
 </head>
-<body>
+<body class="lightMode">
     <x-navbar />
     <x-navbar2 />
     @if (session('access.denied'))
@@ -19,7 +19,7 @@
         </div>
     @endif
     @if (session('message'))
-        <div class="container-fluid">
+        <div class="container-fluid mt-2">
             <div class="row">
                 <div class="col-12">
                     <div class="alert alert-success" role="alert">
@@ -31,6 +31,12 @@
     @endif
     <div class="min-vh-100">
         {{ $slot }}
+    </div>
+    <div class="">
+        <button id="btnMode" class="btnDarkMode">
+            <i class="fa-regular fa-lightbulb fa-2x" id="bulbLight"></i>
+            <i class="fa-solid fa-lightbulb fa-2x" id="bulbDark"></i>
+        </button>
     </div>
     <x-footer />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

@@ -42,8 +42,9 @@ return [
     'gardening' => 'Giardinaggio', 
     'hobby' => 'Hobbies', 
     'clothing' => 'Abbigliamento',
-    'viewCategory' => 'Tutti i prodotto della categoria'
-
+    'viewCategory' => 'Tutti i prodotti della categoria',
+    'confirmPassword' => 'Conferma password',
+    'accountRegister' => 'Non hai un account? Registrati qui!',
 
 
 ];

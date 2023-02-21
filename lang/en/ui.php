@@ -12,7 +12,7 @@ return [
     'logout' => 'Logout',
     'register' => 'Register',
     'login' => 'Login',
-    'slogan' => 'The best products at a click',
+    'slogan' => 'The best products just a click away.',
     'sell' => 'Sell',
     'buy' => 'Buy',
     'workWithUs' => 'Careers',
@@ -43,6 +43,10 @@ return [
     'hobby' => 'Hobbies', 
     'clothing' => 'Clothing',
     'viewCategory' => 'Our product category',
+    'confirmPassword' => 'Confirm password',
+    'accountRegister' => 'Don’t have an account? Register here!',
+
+
 
 
 ];

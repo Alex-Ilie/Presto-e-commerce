@@ -42,7 +42,10 @@ return [
     'gardening' => 'Jardineria', 
     'hobby' => 'Hobbies', 
     'clothing' => 'Ropa',
-    'viewCategory' => 'Todos los productos de la categoría'
+    'viewCategory' => 'Todos los productos de la categoría',
+    'confirmPassword' => 'Confirma password',
+    'accountRegister' => '¿No tienes una cuenta? ¡Regístrate aquí!',
+
 
 
 ];

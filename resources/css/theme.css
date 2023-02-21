@@ -1,9 +1,10 @@
 :root{
-    --main-blue: #003049; 
+    --main-blue: rgb(0, 48, 73); 
     --main-red: #D62828;
     --orange: #F77F00;
     --yellow: rgb(252, 191, 73);
     --beige: #EAE2B7;
+    --white: white;
 }
 
 body{
@@ -173,8 +174,27 @@ body{
     width: 300px; 
   }
 
-  
+  /* dark mode */
 
+  .btnDarkMode{
+    background-color: rgb(0, 48, 73);
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: 2px solid #EAE2B7;
+    color: var(--yellow);
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  .lightMode{
+    background-color: var(--white);
+    color: black;
+    transition: 0,4s;
+  }
+/* end dark mode */
   
   
 

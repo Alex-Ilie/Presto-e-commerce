@@ -1,7 +1,7 @@
 .body {
     background-color: #EAE2B7;
     background-size: cover;
-    min-height: 75vh;
+    min-height: 100vh;
 }
 
 @media (max-width: 1025px){

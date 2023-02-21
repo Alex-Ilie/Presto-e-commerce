@@ -12,7 +12,7 @@
         </form>
       </ul>
       <ul class="navbar-nav ms-auto">
-        <div class="dropdown">
+        <div class="dropdown ">
           <button class=" dropdown-title btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.chooseLang')}}</button>
           <ul class="dropdown-menu" aria-labelledby="languageDropdown">
             <li class="nav-link "><x-_locale lang="it" />Italiano</li>
