@@ -3,7 +3,10 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="my-form card shadow-2-strong">
-                    <div class="card-body p-5 text-center">
+                    <div class="card-body p-5 pt-3 text-center">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                    <a href="{{ route('home') }}"><img src="\img\loghetto.png" class="loghetto " alt="logo2"></a>
+                </div>
                         <h3 class="mb-5">{{ __('ui.insertProduct') }}</h3>
                         <form wire:submit.prevent="store">
                             <div class="form-outline mb-4">

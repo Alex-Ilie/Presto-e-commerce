@@ -6,8 +6,15 @@
 }
 
 .loghetto{
+    height: 120px;
+    width: 120px;
+    transition: all 0.7s ease-in-out;
+}
+
+.loghetto:hover{
     height: 150px;
     width: 150px;
+
 }
 
 @media (max-width: 1025px) {

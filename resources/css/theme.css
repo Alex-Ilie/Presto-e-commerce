@@ -16,7 +16,7 @@ body{
     height: 50px;
     padding: 30px;
     position: relative;
-    z-index: 3 !important;
+    
 }
 
 .nav2{
@@ -85,13 +85,14 @@ body{
     .dropdown-title{
         padding-left: 18%;
     }
+    .navbar1{
+       z-index: 3 !important;
+    }
 
     .benvenuto{
         padding-left: 13%;
     }
-    .pallino{
-       margin-right: 20px;
-    }
+    
 
 }
 
