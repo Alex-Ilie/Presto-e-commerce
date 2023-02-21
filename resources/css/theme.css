@@ -16,6 +16,7 @@ body{
     height: 50px;
     padding: 30px;
     position: relative;
+    z-index: 3 !important;
 }
 
 .nav2{
@@ -31,6 +32,7 @@ body{
 .nav-link3:hover {
     border-bottom: 1px solid white;
 }
+
 
 .myfooter{
     background-color: var(--main-blue);
@@ -74,9 +76,27 @@ body{
         top: 60px;
         right: 5px;
         color: black;
-        padding-left: 10px;
+        /* padding-left: 10px; */
     }
+    .navbar-custom1{
+        width: 162px;
+    }
+    
+    .dropdown-title{
+        padding-left: 18%;
+    }
+
+    .benvenuto{
+        padding-left: 13%;
+    }
+    .pallino{
+       margin-right: 20px;
+    }
+
 }
+
+
+
 
 .page-item{
     margin-top: 100px;
@@ -127,6 +147,8 @@ body{
     border: 1px solid white;
 }
 
+
+
 .benvenuto:focus{
     color: rgb(192, 187, 187);
     border: 1px solid white;
@@ -134,12 +156,16 @@ body{
 }
 
 
+
 .dropdown-menu {
     background-color: var(--main-blue);
     border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 0.5rem;
+    width: 100px;
   }
+
+  
   
   .dropdown-item {
     display: flex;
@@ -196,6 +222,7 @@ body{
   }
 /* end dark mode */
   
+
   
 
   
