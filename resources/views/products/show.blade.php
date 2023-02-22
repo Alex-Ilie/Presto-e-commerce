@@ -8,8 +8,8 @@
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                         @foreach($product->images as $image)
-                            <div class="carousel-item active">
-                            <img src="{{$image->getUrl(600, 600)}}" class="d-block w-100" alt="...">
+                            <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{$image->getUrl(600, 600)}}" class="d-block w-100 rounded" alt="...">
                             </div>
                         @endforeach
                         </div>
@@ -23,28 +23,30 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 boxWhite">
                     @if(Auth::user()->is_revisor)
-                        <h2>{{$product->title}}</h2>
-                        <h5>€ {{$product->price}}</h5>
-                        <h5><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
-                        <h5><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
-                        <h5>{{ __('ui.productDescription') }}</h5>
-                        <div class="textbox">
-                        <h5>{{$product->description}}</h5>
+                        <h2 class="mt-4 ms-2">{{$product->title}}</h2>
+                        <h5 class="mt-4 ms-2 price">€ {{$product->price}}</h5>
+                        <h5 class="mt-4 ms-2"><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
+                        <h5 class="mt-4 ms-2"><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
+                        <h5 class="mt-4 ms-2">{{ __('ui.productDescription') }}</h5>
+                        <div class="textbox cont-1">
+                        <h5 class="mt-4 ms-2">{{$product->description}}</h5>
                         </div>
-                        <form  method="POST" action="{{route('revisor.rivedi_product', $product)}}">
+                        <form class="mt-5 ms-3"  method="POST" action="{{route('revisor.rivedi_product', $product)}}">
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-success shadow">{{ __('ui.btnSendinRevision') }}</button>
                         </form>
                     @else
-                        <h2>{{$product->title}}</h2>
-                        <h5>€ {{$product->price}}</h5>
-                        <h5><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
-                        <h5><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
-                        <h5>{{ __('ui.productDescription') }}</h5>
-                        <h5>{{$product->description}}</h5>
+                        <h2 class="mt-4 ms-2">{{$product->title}}</h2>
+                        <h5 class="mt-4 ms-2 price">€ {{$product->price}}</h5>
+                        <h5 class="mt-4 ms-2"><i class="fa-solid fa-calendar-days"></i> {{$product->created_at->format('d/m/Y')}}</h5>
+                        <h5 class="mt-4 ms-2"><i class="fa-solid fa-user"></i> {{$product->user->name}}</h5>
+                        <h5 class="mt-4 ms-2">{{ __('ui.productDescription') }}</h5>
+                        <div class="cont-1">
+                            <h5 class="mt-4 ms-2">{{$product->description}}</h5>
+                        </div>
                     @endif
                 </div>
             </div>

@@ -20,9 +20,9 @@
                             <div class="carousel-inner">
                                 @foreach ($product_to_check->images as $image)
                                     <div class="carousel-item @if($loop->first)active @endif">
-                                        <img src="{{$image->getUrl(600, 600)}}" class="d-block w-100" alt="...">
+                                        <img src="{{$image->getUrl(600, 600)}}" class="d-block w-100 rounded" alt="...">
                                         <div class="col-12 d-flex ">
-                                            <div class="col-md-6">
+                                            <div class="col-6 col-md-6">
                                                 <!-- <div class="card-body"> -->
                                                     <h5 class="tc-accent mt-3">Revisione immagini</h5>
                                                     <p>Adulti: <span class="{{ $image->adult }}"></span></p>
@@ -32,7 +32,7 @@
                                                     <p>Contenuto ammiccante: <span class="{{ $image->racy }}"></span></p>
                                                 <!-- </div> -->
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-6 col-md-6">
                                                 <h5 class="tc-accent mt-3">Tags</h5>
                                                     <!-- <ul class=" list-unstyled"> -->
                                                     @if ($image->labels)
