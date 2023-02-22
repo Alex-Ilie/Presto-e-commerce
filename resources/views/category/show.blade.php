@@ -7,7 +7,7 @@
     <div class="container my-5">
         <div class="row">
             @if($category->products->isNotEmpty())
-                @foreach($category->products as $product)
+                @foreach($category->products->where('is_accepted', true) as $product)
                     <div class="col-12 d-flex justify-content-center col-md-4 my-3">
                         <x-card-product :product="$product"/>
                     </div>

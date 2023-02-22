@@ -21,6 +21,8 @@
                                     aria-label="Default select example">
                                     <option value="">{{ __('ui.chooseCategory') }}</option>
                                     @foreach ($categories as $category)
+                                    <x-category-option categoryId="{{ $category->id }}"
+                                                categoryName="{{ $category->name }}" />
                                         @if (session('locale') == 'it')
                                             <x-category-option categoryId="{{ $category->id }}"
                                                 categoryName="{{ $category->name }}" />

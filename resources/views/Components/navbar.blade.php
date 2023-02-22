@@ -1,4 +1,4 @@
-<nav class="navbar navbar1 navbar-expand-lg navbar navbar-dark">
+<nav class="navbar navbar1 navbar-expand-lg navbar navbar-dark ">
   <div class="container-fluid">
     <a class="navbar-brand logo" href="{{ route('home') }}"><img src="\img\logo2.png" class="logo" alt="logo2"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@
             <li class="nav-link"><x-_locale lang="es" />Español</li>
           </ul>
         </div>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown me-3">
           @auth
             <a class=" benvenuto nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{__('ui.welcome')}} {{ Auth::user()->name }}
