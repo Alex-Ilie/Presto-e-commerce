@@ -33,17 +33,16 @@ class ProductCreate extends Component
         'title' => 'required|min:5|max:30',
         'price' => 'required',
         'description' => 'required|min:20',
-        'images.*'=> 'image|max:3072',
-        'temporary_images.*'=> 'image|max:3072',
+        'images.*'=> 'required|image|max:3072',
+        'temporary_images.*'=> 'required|image|max:3072',
     ];
 
     protected $messages = [
+        'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 3mb',
         'required' => 'Il campo :attribute è richiesto',
         'min' => 'Il campo :attribute è troppo corto',
         'temporary_images.required' => 'L\'immagine è richiesta',
-        'temporary_images-*.image' => 'I file devono essere immagini',
-        'temporary_images.*.max' => 'L\'immagine dev\'essere massimo di 1mb',
-        'images.image' => 'L\'immagine dev\'essere massimo di 1mb',
+        'temporary_images.*.image' => 'I file devono essere immagini',
     ];
 
     public function updatedTemporaryImages()
@@ -93,7 +92,7 @@ class ProductCreate extends Component
                     $newFileName = "products/{$this->product->id}";
                     $newImage = $this->product->images()->create(['path' => $image->store($newFileName, 'public')]);
                     RemoveFaces::withChain([
-                    (new ResizeImage($newImage->path, 300 , 300)),
+                    (new ResizeImage($newImage->path, 600 , 600)),
                     (new GoogleVisionSafeSearch($newImage->id)),
                     (new GoogleVisionLabelImage($newImage->id))
                     ])->dispatch($newImage->id);

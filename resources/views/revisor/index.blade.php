@@ -20,7 +20,7 @@
                             <div class="carousel-inner">
                                 @foreach ($product_to_check->images as $image)
                                     <div class="carousel-item active @if($loop->first)active @endif">
-                                        <img src="{{$image->getUrl(300, 300)}}" class="d-block w-100" alt="...">
+                                        <img src="{{$image->getUrl(600, 600)}}" class="d-block w-100" alt="...">
                                         <div class="col-md-3 border-end">
                                             <h5 class="tc-accent mt-3">Tags</h5>
                                             <div class="p-2">

@@ -21,8 +21,6 @@
                                     aria-label="Default select example">
                                     <option value="">{{ __('ui.chooseCategory') }}</option>
                                     @foreach ($categories as $category)
-                                    <x-category-option categoryId="{{ $category->id }}"
-                                                categoryName="{{ $category->name }}" />
                                         @if (session('locale') == 'it')
                                             <x-category-option categoryId="{{ $category->id }}"
                                                 categoryName="{{ $category->name }}" />
@@ -49,7 +47,7 @@
                                 <input wire:model="temporary_images" multiple
                                     class="form-control form-control-lg shadow @error('temporary_images.*') is invalid @enderror"
                                     name="images" type="file">
-                                @error('temporary_images')
+                                @error('temporary_images.*')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
