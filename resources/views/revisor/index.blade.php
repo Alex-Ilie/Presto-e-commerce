@@ -1,6 +1,6 @@
 <x-layout>
 <div class="body py-5" >
-    <div class="container">
+    <div class="container mb-2">
         <div class="row">
             <div class="col-12">
                 @if($product_to_check == null)
@@ -19,28 +19,31 @@
                         @if ($product_to_check->images)
                             <div class="carousel-inner">
                                 @foreach ($product_to_check->images as $image)
-                                    <div class="carousel-item active @if($loop->first)active @endif">
+                                    <div class="carousel-item @if($loop->first)active @endif">
                                         <img src="{{$image->getUrl(600, 600)}}" class="d-block w-100" alt="...">
-                                        <div class="col-md-3 border-end">
-                                            <h5 class="tc-accent mt-3">Tags</h5>
-                                            <div class="p-2">
-                                                @if ($image->labels)
-                                                @foreach ($image->labels as $label)
-                                                <p class="d-inline">{{ $label }},</p>
-                                                @endforeach
-                                                @endif
+                                        <div class="col-12 d-flex ">
+                                            <div class="col-md-6">
+                                                <!-- <div class="card-body"> -->
+                                                    <h5 class="tc-accent mt-3">Revisione immagini</h5>
+                                                    <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                    <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                    <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                                    <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                                    <p>Contenuto ammiccante: <span class="{{ $image->racy }}"></span></p>
+                                                <!-- </div> -->
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="tc-accent mt-3">Tags</h5>
+                                                    <!-- <ul class=" list-unstyled"> -->
+                                                    @if ($image->labels)
+                                                    @foreach ($image->labels as $label)
+                                                    <span class="">{{ $label }},</span>
+                                                    @endforeach
+                                                    @endif
+                                                    <!-- </ul> -->
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="card-body">
-                                                <h5 class="tc-accent">Revisione immagini</h5>
-                                                <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                                                <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                                                <p>Medicina: <span class="{{ $image->medical }}"></span></p>
-                                                <p>Violenza: <span class="{{ $image->violence }}"></span></p>
-                                                <p>Contenuto ammiccante: <span class="{{ $image->racy }}"></span></p>
-                                            </div>
-                                        </div>
+     
                                     </div>
 
                                 @endforeach
@@ -65,26 +68,30 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <h2>{{ $product_to_check->title }}</h2>
-                    <h5>{{ __('ui.productPrice') }} € {{$product_to_check->price}}</h5>
-                    <h5><i class="fa-solid fa-calendar-days"></i> {{$product_to_check->created_at->format('d/m/Y')}}</h5>
-                    <h5><i class="fa-solid fa-user"></i> {{$product_to_check->user->name}}</h5>
-                    <h5>{{ __('ui.productDescription') }}</h5>
-                    <h5>{{$product_to_check->description}}</h5>
+                <div class="col-12 col-md-6 boxWhite">
+                    <h2 class="text-center mt-2">{{ $product_to_check->title }}</h2>
+                    <h5 class="mt-4 price">{{ __('ui.productPrice') }} € {{$product_to_check->price}}</h5>
+                    <h5 class="mt-4 ms-2"><i class="fa-solid fa-calendar-days"></i> {{$product_to_check->created_at->format('d/m/Y')}}</h5>
+                    <h5 class="mt-4 ms-2"><i class="fa-solid fa-user"></i> {{$product_to_check->user->name}}</h5>
+                    <h5 class="mt-4 ms-2">{{$product_to_check->category->name}}</h5>
+                    <hr>
+                    <div class="container cont-1">
+                        <h5 class="mt-4">{{ __('ui.productDescription') }}</h5>
+                        <h5 class="mt-4">{{$product_to_check->description}}</h5>
+                    </div>
                     <div class="d-flex mx-auto">
                         <div class="mx-2">
                             <form  method="POST" action="{{route('revisor.accept_product', ['product' => $product_to_check])}}">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-success shadow">{{ __('ui.btnAccept') }}</button>
+                                <button type="submit" class="btn btn-success shadow mt-5">{{ __('ui.btnAccept') }}</button>
                             </form>
                         </div>
                         <div class="mx-2" >
                             <form  method="POST" action="{{route('revisor.reject_product', ['product' => $product_to_check])}}">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-danger shadow">{{ __('ui.btnDecline') }}</button>
+                                <button type="submit" class="btn btn-danger shadow mt-5">{{ __('ui.btnDecline') }}</button>
                             </form>
 
                         </div>
@@ -93,7 +100,6 @@
                 </div>
             </div>
         </div>
-
     @endif
     </div>
 </x-layout>

@@ -224,6 +224,24 @@ body{
 /* end dark mode */
   
 
-  
+.price{
+    font-weight: bold;
+    color: var(--orange);
+    display: inline-block;
+    padding: 5px;
+    font-size: 30px;
+}
 
   
+.boxWhite{
+    background-color: white;
+    height: 635px;
+    border-radius: 20px;
+
+}
+
+.cont-1{
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 2rem;
+  }
